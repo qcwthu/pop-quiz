@@ -10,7 +10,7 @@ from operator import attrgetter
 from random import shuffle
 from typing import Self
 
-from pop_quiz.animals import random_animal_name
+from pop_quiz.animals import Animal
 from pop_quiz.models import Answer, Participant, Question, Quiz, QuizPhase
 from pop_quiz.scoring import calculate_points
 
@@ -118,13 +118,8 @@ class GameState:
         Returns:
             The participant if added/reconnected, None if not allowed.
         """
-        # Pick a fresh animal name for this join
-        display_name = random_animal_name()
-
-        # Reconnection: keep the existing participant but freshen the name
-        if stored_id and stored_id in self.participants:
-            existing = self.participants[stored_id]
-            existing.display_name = display_name
+        # Only allow reconnection with a stored_id if the participant exists
+        if stored_id and (existing := self.participants.get(stored_id)):
             return existing
 
         # New participants can only join during lobby phase
@@ -137,7 +132,7 @@ class GameState:
 
         # Always generate server-side ID for new participants to prevent impersonation
         new_id = str(uuid.uuid4())
-        participant = Participant(id=new_id, display_name=display_name)
+        participant = Participant(id=new_id, display_name=str(Animal.random()))
         self.participants[new_id] = participant
         return participant
 

@@ -39,7 +39,7 @@ This will start a local server, open the host dashboard in your browser, and dis
 
 - **Simple hosting**: Run from the terminal with a single command
 - **Easy joining**: Participants scan a QR code, use the copy link button, or enter a PIN
-- **Fun names**: Each participant gets a random animal name (e.g., "Brave 🐼 Panda")
+- **Fun names**: Each participant gets a random animal name (e.g., "Brave Panda 🐼")
 - **Real-time updates**: Live leaderboard and answer counts powered by WebSockets
 - **Kahoot-style scoring**: Faster correct answers earn more points (500-1000)
 - **YAML quizzes**: Define quizzes with 2-6 choices per question, optional images, and custom time limits

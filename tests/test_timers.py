@@ -1,7 +1,7 @@
 """Tests for the timers module."""
 
 import asyncio
-from unittest.mock import AsyncMock, patch
+from unittest.mock import AsyncMock, Mock, patch
 
 import pytest
 
@@ -179,23 +179,19 @@ class TestScheduleQuestionTimer:
         state.add_participant("p1")
         state.start_quiz()
         state.start_question()
-        import pop_quiz.timers as timers_module
 
-        def fake_create_task(coro: object) -> AsyncMock:
-            close = getattr(coro, "close", None)
-            if callable(close):
-                close()
-            return AsyncMock()
+        task_input = object()
 
-        try:
-            with patch(
-                "pop_quiz.timers.asyncio.create_task",
-                side_effect=fake_create_task,
-            ) as mock_create:
-                await schedule_question_timer(state)
-                mock_create.assert_called_once()
-        finally:
-            timers_module._question_timer_task = None
+        with (
+            patch(
+                "pop_quiz.timers._run_question_timer",
+                new=Mock(return_value=task_input),
+            ) as mock_run,
+            patch("pop_quiz.timers.asyncio.create_task") as mock_create,
+        ):
+            await schedule_question_timer(state)
+            mock_run.assert_called_once_with(state)
+            mock_create.assert_called_once_with(task_input)
 
     async def test_cancels_previous_task(self) -> None:
         """Should cancel previous timer task."""
