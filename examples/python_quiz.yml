@@ -1,0 +1,117 @@
+title: "Python Quiz"
+description: "Test your Python knowledge!"
+
+questions:
+  - question: "What programming language is represented by this logo?"
+    image: "https://www.python.org/static/community_logos/python-logo-generic.svg"
+    choices:
+      - "Java"
+      - "Python"
+      - "Ruby"
+      - "JavaScript"
+    correct: 1
+  - question: "Is Python dynamically typed?"
+    choices:
+      - "Yes"
+      - "No"
+    correct: 0
+    time_limit: 5
+  - question: "Which of these is NOT a Python data type?"
+    choices:
+      - "list"
+      - "dict"
+      - "array"
+      - "tuple"
+      - "set"
+      - "frozenset"
+    correct: 2
+    time_limit: 10
+  - question: "What is the output of `print(type([]))`?"
+    choices:
+      - "<class 'tuple'>"
+      - "<class 'list'>"
+      - "<class 'dict'>"
+      - "<class 'set'>"
+    correct: 1
+    time_limit: 30
+
+  - question: "Which keyword is used to define a function in Python?"
+    choices:
+      - "`function`"
+      - "`func`"
+      - "`def`"
+      - "`define`"
+    correct: 2
+    time_limit: 20
+
+  - question: "What does PEP stand for?"
+    choices:
+      - "Python Enhancement Proposal"
+      - "Python Execution Protocol"
+      - "Programming Extension Package"
+      - "Python Environment Platform"
+    correct: 0
+    time_limit: 30
+
+  - question: "Which of these is NOT a valid Python data type?"
+    choices:
+      - "`int`"
+      - "`float`"
+      - "`char`"
+      - "`str`"
+    correct: 2
+    time_limit: 25
+
+  - question: "What is the output of `3 * 'ab'`?"
+    choices:
+      - "Error"
+      - "`'ababab'`"
+      - "`'ab ab ab'`"
+      - "`9`"
+    correct: 1
+    time_limit: 30
+
+  - question: "Which method adds an element to the end of a list?"
+    choices:
+      - "`add()`"
+      - "`insert()`"
+      - "`append()`"
+      - "`extend()`"
+    correct: 2
+    time_limit: 25
+
+  - question: "What is the correct way to create a dictionary?"
+    choices:
+      - "`d = []`"
+      - "`d = {}`"
+      - "`d = ()`"
+      - "`d = <>`"
+    correct: 1
+    time_limit: 20
+
+  - question: "What does the `len()` function return for the string `'Hello'`?"
+    choices:
+      - "`4`"
+      - "`5`"
+      - "`6`"
+      - "Error"
+    correct: 1
+    time_limit: 20
+
+  - question: "Which operator is used for floor division in Python?"
+    choices:
+      - "`/`"
+      - "`//`"
+      - "`%`"
+      - "`**`"
+    correct: 1
+    time_limit: 25
+
+  - question: "What is the output of `bool('')`?"
+    choices:
+      - "`True`"
+      - "`False`"
+      - "`None`"
+      - "Error"
+    correct: 1
+    time_limit: 25

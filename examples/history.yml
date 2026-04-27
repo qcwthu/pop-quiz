@@ -1,0 +1,91 @@
+title: "World History"
+description: "Journey through time with these history questions!"
+
+questions:
+  - question: "In what year did World War II end?"
+    choices:
+      - "1943"
+      - "1944"
+      - "1945"
+      - "1946"
+    correct: 2
+    time_limit: 15
+
+  - question: "Who was the first President of the United States?"
+    choices:
+      - "Thomas Jefferson"
+      - "George Washington"
+      - "John Adams"
+      - "Benjamin Franklin"
+    correct: 1
+    time_limit: 15
+
+  - question: "The ancient city of Rome was built on how many hills?"
+    choices:
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+    correct: 2
+    time_limit: 20
+
+  - question: "Which empire was ruled by Genghis Khan?"
+    choices:
+      - "Ottoman Empire"
+      - "Roman Empire"
+      - "Mongol Empire"
+      - "Persian Empire"
+    correct: 2
+    time_limit: 15
+
+  - question: "The French Revolution began in which year?"
+    choices:
+      - "1776"
+      - "1789"
+      - "1799"
+      - "1804"
+    correct: 1
+    time_limit: 20
+
+  - question: "Who discovered America in 1492?"
+    choices:
+      - "Amerigo Vespucci"
+      - "Christopher Columbus"
+      - "Ferdinand Magellan"
+    correct: 1
+    time_limit: 15
+
+  - question: "The Great Wall of China was primarily built to protect against invasions from the..."
+    choices:
+      - "South"
+      - "North"
+    correct: 1
+    time_limit: 15
+
+  - question: "Which ancient wonder was located in Alexandria, Egypt?"
+    choices:
+      - "Hanging Gardens"
+      - "Colossus"
+      - "Lighthouse (Pharos)"
+      - "Temple of Artemis"
+      - "Mausoleum"
+    correct: 2
+    time_limit: 25
+
+  - question: "Who wrote the 'I Have a Dream' speech?"
+    choices:
+      - "Malcolm X"
+      - "Martin Luther King Jr."
+      - "Rosa Parks"
+      - "John F. Kennedy"
+    correct: 1
+    time_limit: 15
+
+  - question: "The Berlin Wall fell in which year?"
+    choices:
+      - "1987"
+      - "1989"
+      - "1991"
+      - "1993"
+    correct: 1
+    time_limit: 20

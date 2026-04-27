@@ -1,0 +1,48 @@
+title: "Classic Literature Challenge"
+description: "For the well-read: a quiz on timeless novels and their authors."
+
+questions:
+  - question: "Who wrote the novel 'Pride and Prejudice'?"
+    choices:
+      - "Charlotte Brontë"
+      - "Mary Shelley"
+      - "Jane Austen"
+      - "Virginia Woolf"
+    correct: 2
+    time_limit: 15
+
+  - question: "In which novel would you find the character Captain Ahab and his obsessive hunt for a white whale?"
+    choices:
+      - "Moby-Dick"
+      - "Treasure Island"
+      - "The Old Man and the Sea"
+      - "20,000 Leagues Under the Sea"
+    correct: 0
+    time_limit: 20
+
+  - question: "What is the name of the dystopian novel by George Orwell that features 'Big Brother'?"
+    choices:
+      - "Brave New World"
+      - "Fahrenheit 451"
+      - "Nineteen Eighty-Four"
+      - "Animal Farm"
+    correct: 2
+    time_limit: 15
+
+  - question: "Which of these famous authors wrote 'The Great Gatsby'?"
+    choices:
+      - "Ernest Hemingway"
+      - "F. Scott Fitzgerald"
+      - "William Faulkner"
+      - "John Steinbeck"
+    correct: 1
+    time_limit: 15
+
+  - question: "The quote 'It was the best of times, it was the worst of times' is the opening line from which Charles Dickens novel?"
+    choices:
+      - "Oliver Twist"
+      - "Great Expectations"
+      - "A Christmas Carol"
+      - "A Tale of Two Cities"
+    correct: 3
+    time_limit: 25

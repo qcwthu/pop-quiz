@@ -1,0 +1,109 @@
+title: "Science Trivia"
+description: "From atoms to galaxies - test your scientific knowledge!"
+
+questions:
+  - question: "What is the chemical symbol for gold?"
+    choices:
+      - "Go"
+      - "Gd"
+      - "Au"
+      - "Ag"
+    correct: 2
+    time_limit: 15
+
+  - question: "How many planets are in our solar system?"
+    choices:
+      - "7"
+      - "8"
+      - "9"
+    correct: 1
+    time_limit: 10
+
+  - question: "What is the hardest natural substance on Earth?"
+    choices:
+      - "Titanium"
+      - "Diamond"
+      - "Quartz"
+      - "Obsidian"
+    correct: 1
+    time_limit: 15
+
+  - question: "Which gas makes up most of Earth's atmosphere?"
+    choices:
+      - "Oxygen"
+      - "Carbon Dioxide"
+      - "Nitrogen"
+      - "Hydrogen"
+    correct: 2
+    time_limit: 20
+
+  - question: "What is the speed of light in a vacuum (approximately)?"
+    choices:
+      - "300,000 km/s"
+      - "150,000 km/s"
+      - "500,000 km/s"
+      - "1,000,000 km/s"
+    correct: 0
+    time_limit: 20
+
+  - question: "DNA stands for..."
+    choices:
+      - "Deoxyribonucleic Acid"
+      - "Dinitrogen Acid"
+      - "Deoxyribose Nucleic Arrangement"
+      - "Dynamic Nucleotide Acid"
+    correct: 0
+    time_limit: 25
+
+  - question: "Which planet is known as the Red Planet?"
+    choices:
+      - "Venus"
+      - "Mars"
+      - "Jupiter"
+      - "Saturn"
+    correct: 1
+    time_limit: 10
+
+  - question: "What is the largest organ in the human body?"
+    choices:
+      - "Liver"
+      - "Brain"
+      - "Skin"
+      - "Heart"
+      - "Lungs"
+    correct: 2
+    time_limit: 20
+
+  - question: "Water is made up of which two elements?"
+    choices:
+      - "Hydrogen and Oxygen"
+      - "Hydrogen and Carbon"
+    correct: 0
+    time_limit: 10
+
+  - question: "What force keeps planets in orbit around the Sun?"
+    choices:
+      - "Magnetism"
+      - "Friction"
+      - "Gravity"
+      - "Nuclear Force"
+    correct: 2
+    time_limit: 15
+
+  - question: "Which scientist developed the theory of general relativity?"
+    choices:
+      - "Isaac Newton"
+      - "Niels Bohr"
+      - "Albert Einstein"
+      - "Stephen Hawking"
+    correct: 2
+    time_limit: 20
+
+  - question: "How many bones are in the adult human body?"
+    choices:
+      - "186"
+      - "206"
+      - "226"
+      - "256"
+    correct: 1
+    time_limit: 20

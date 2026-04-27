@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ quiz_title }} - Host Dashboard</title>
+    <link rel="stylesheet" href="/static/common.css">
+    <link rel="stylesheet" href="/static/host.css">
+</head>
+
+<body class="phase-lobby">
+    <div class="corner-controls">
+        <!-- Theme toggle button -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="theme-icon sun-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg class="theme-icon moon-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <span class="theme-icon auto-icon">A</span>
+        </button>
+    </div>
+
+    <div class="host-layout" role="application">
+        <!-- Header Section -->
+        <header class="host-header">
+            <h1 class="quiz-title-host">{{ quiz_title }}</h1>
+            {% if quiz_description %}
+            <p class="quiz-description-host">{{ quiz_description }}</p>
+            {% endif %}
+        </header>
+
+        <aside class="sidebar" aria-label="Host information sidebar">
+
+
+            <!-- Join Info Card -->
+            <div class="join-card glass-elevated">
+                <div class="qr-code-container">
+                    <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code to join quiz">
+                </div>
+
+                <div class="join-details">
+                    <div class="pin-section">
+                        <span class="pin-label">Quiz PIN</span>
+                        <div class="pin-display">{{ pin }}</div>
+                    </div>
+
+                    <div class="url-section">
+                        <div class="join-url-box">
+                            <a href="{{ join_url }}" target="_blank" class="url-text">{{ join_url }}</a>
+                        </div>
+                        <button class="copy-btn" id="copy-link-btn" title="Copy link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lobby Controls -->
+            <div class="lobby-controls-card glass-subtle" id="lobby-controls">
+                <div class="participant-counter">
+                    <div class="counter-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                        <span id="participant-count-text">0 participants</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-large" id="start-btn" disabled>
+                    Start Quiz
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="margin-left: 8px;">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-stage">
+            <!-- Leaderboard - shown in lobby, hidden during quiz -->
+            <div class="leaderboard-panel glass-elevated">
+                <div class="leaderboard-title">Leaderboard</div>
+                <div id="leaderboard-list"></div>
+                <div id="waiting-cue" class="waiting-cue hidden">
+                    <div class="waiting-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <p>Waiting for players to join...</p>
+                </div>
+            </div>
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card glass-elevated">
+                    <span class="stat-value" id="stat-participants">0</span>
+                    <span class="stat-label">Participants</span>
+                </div>
+                <div class="stat-card glass-elevated">
+                    <span class="stat-value" id="stat-answered">0</span>
+                    <span class="stat-label">Answered</span>
+                </div>
+                <div class="stat-card glass-elevated">
+                    <span class="stat-value" id="stat-progress">0/0</span>
+                    <span class="stat-label">Progress</span>
+                </div>
+            </div>
+
+            <!-- Question Display -->
+            <div class="question-display glass-elevated">
+                <div class="question-header">
+                    <div>
+                        <span class="question-number" id="question-number">Question 1 of 10</span>
+                        <span class="answers-count" id="answers-count" style="margin-left: 20px;">0 answers</span>
+                    </div>
+                    <span class="timer" id="timer"></span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="question-image" id="question-image" style="display: none;">
+                    <img id="question-image-src" src="" alt="Question image">
+                </div>
+                <div class="question-text" id="question-text">Loading...</div>
+                <div class="choices" id="choices"></div>
+            </div>
+
+            <!-- Final Results -->
+            <div class="final-results glass-elevated" style="display: none; text-align: center; padding: 40px;">
+                <h2 style="margin-bottom: 20px;">Quiz Complete!</h2>
+                <div class="winner" id="winner" style="font-size: 2rem; margin-bottom: 30px;"></div>
+                <div id="final-leaderboard"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Countdown overlay -->
+    <div class="countdown-overlay hidden" id="countdown-overlay">
+        <div class="countdown-text">Get Ready!</div>
+        <div class="countdown-number" id="countdown-number">3</div>
+        <div class="countdown-question-preview" id="countdown-preview">Question 1 of 10</div>
+    </div>
+
+    <!-- Connection lost overlay -->
+    <div class="connection-lost hidden" id="connection-lost">
+        <h2>Connection Lost</h2>
+        <p>The server is no longer reachable.</p>
+        <button onclick="location.reload()">Reload Page</button>
+    </div>
+
+    <script src="/static/common.js"></script>
+    <script src="/static/host.js"></script>
+</body>
+
+</html>

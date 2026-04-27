@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>{{ quiz_title }}</title>
+    <link rel="stylesheet" href="/static/common.css">
+    <link rel="stylesheet" href="/static/participant.css">
+</head>
+<body>
+    <div class="corner-controls">
+        <!-- Fullscreen button (mobile only) -->
+        <button class="fullscreen-btn hidden" id="fullscreen-btn" title="Toggle fullscreen" aria-label="Toggle fullscreen mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+            </svg>
+        </button>
+        <!-- Theme toggle button -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="theme-icon sun-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme-icon moon-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <span class="theme-icon auto-icon">A</span>
+        </button>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <div class="display-name" id="display-name">Joining...</div>
+            <div class="score-container">
+                Score: <span id="score" aria-label="Current score">0</span>
+                <span class="score-popup hidden" id="score-popup" aria-live="polite" aria-atomic="true"></span>
+            </div>
+        </header>
+
+        <div class="waiting glass-panel hidden" id="waiting-screen">
+            <div class="waiting-quiz-info">
+                <h1 class="waiting-quiz-title">{{ quiz_title }}</h1>
+                {% if quiz_description %}
+                <p class="waiting-quiz-description">{{ quiz_description }}</p>
+                {% endif %}
+            </div>
+            <h2>You're in!</h2>
+            <div class="loader"></div>
+            <p>Waiting for the host to start the quiz...</p>
+        </div>
+
+        <div class="countdown-screen glass-panel hidden" id="countdown-screen">
+            <h2>Get Ready!</h2>
+            <div class="countdown-number" id="countdown-number">3</div>
+            <p id="countdown-question-preview"></p>
+            <div class="countdown-leaderboard hidden" id="countdown-leaderboard">
+                <div class="countdown-leaderboard-header">Leaderboard</div>
+                <div class="countdown-leaderboard-list" id="countdown-leaderboard-list"></div>
+            </div>
+        </div>
+
+        <div class="question-area glass-panel hidden" id="question-screen">
+            <div class="question-header">
+                <span id="question-number">Question 1 of 10</span>
+                <span class="timer" id="timer"></span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
+            </div>
+            <div class="reveal-overlay hidden" id="reveal-overlay" aria-live="polite" aria-atomic="true"></div>
+            <img class="question-image hidden" id="question-image" src="" alt="Question image">
+            <div class="question-text" id="question-text">Loading question...</div>
+            <div class="choices" id="choices"></div>
+        </div>
+
+        <div class="answered-message glass-panel hidden" id="answered-screen">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="answered-progress-bar" style="width: 0%"></div>
+            </div>
+            <p id="answer-feedback" style="font-size: 1.8rem; font-weight: bold; margin-bottom: 10px;">
+                Answer submitted!
+            </p>
+            <p style="opacity: 0.7;">Waiting for other participants...</p>
+            <div id="answered-timer" style="margin-top: 25px; opacity: 0.8;"></div>
+        </div>
+
+        <div class="results hidden" id="results-screen">
+            <h2 id="results-title">Quiz Complete!</h2>
+            <div class="final-score" id="final-score">0</div>
+            <div class="rank" id="rank"></div>
+            <div class="leaderboard glass-panel">
+                <h3>Top Players</h3>
+                <div id="final-leaderboard"></div>
+            </div>
+            <div class="review-section">
+                <button class="review-toggle" id="review-toggle">Review Answers</button>
+                <div class="review-questions hidden" id="review-questions"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="confetti-container hidden" id="confetti-container" aria-hidden="true"></div>
+
+    <!-- Connection lost overlay -->
+    <div class="connection-lost hidden" id="connection-lost" role="alert" aria-live="assertive">
+        <h2>Connection Lost</h2>
+        <p>The server is no longer reachable. Your progress has been saved.</p>
+        <button onclick="location.reload()">Reconnect</button>
+    </div>
+
+    <script src="/static/common.js"></script>
+    <script src="/static/participant.js"></script>
+</body>
+</html>

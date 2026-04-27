@@ -1,0 +1,92 @@
+title: "Movie Trivia"
+description: "Lights, camera, action! Test your film knowledge!"
+
+questions:
+  - question: "Which movie won the Academy Award for Best Picture in 1994?"
+    choices:
+      - "Pulp Fiction"
+      - "The Shawshank Redemption"
+      - "Forrest Gump"
+      - "The Lion King"
+    correct: 2
+    time_limit: 20
+
+  - question: "Who directed the movie 'Jaws'?"
+    choices:
+      - "George Lucas"
+      - "Steven Spielberg"
+      - "Martin Scorsese"
+      - "Francis Ford Coppola"
+    correct: 1
+    time_limit: 20
+
+  - question: "In 'The Matrix', does Neo take the blue pill or the red pill?"
+    choices:
+      - "Blue pill"
+      - "Red pill"
+    correct: 1
+    time_limit: 15
+
+  - question: "Which actor played Jack Dawson in 'Titanic'?"
+    choices:
+      - "Brad Pitt"
+      - "Leonardo DiCaprio"
+      - "Matt Damon"
+      - "Johnny Depp"
+    correct: 1
+    time_limit: 15
+
+  - question: "What is the highest-grossing film of all time (adjusted for inflation)?"
+    choices:
+      - "Avatar"
+      - "Titanic"
+      - "Gone with the Wind"
+      - "Avengers: Endgame"
+      - "Star Wars: A New Hope"
+    correct: 2
+    time_limit: 25
+
+  - question: "Which studio created 'Toy Story', the first fully computer-animated feature film?"
+    choices:
+      - "DreamWorks"
+      - "Pixar"
+      - "Disney"
+      - "Blue Sky"
+    correct: 1
+    time_limit: 15
+
+  - question: "What is the name of the fictional African country in 'Black Panther'?"
+    choices:
+      - "Zamunda"
+      - "Wakanda"
+      - "Latveria"
+      - "Genosha"
+    correct: 1
+    time_limit: 15
+
+  - question: "How many 'Harry Potter' movies were made?"
+    choices:
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+    correct: 2
+    time_limit: 15
+
+  - question: "Who composed the iconic music for 'Star Wars'?"
+    choices:
+      - "Hans Zimmer"
+      - "John Williams"
+      - "Howard Shore"
+      - "Danny Elfman"
+    correct: 1
+    time_limit: 20
+
+  - question: "In which year was the first 'Lord of the Rings' movie released?"
+    choices:
+      - "1999"
+      - "2000"
+      - "2001"
+      - "2002"
+    correct: 2
+    time_limit: 20

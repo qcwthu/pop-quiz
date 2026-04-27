@@ -1,0 +1,93 @@
+title: "Sports Trivia"
+description: "Test your knowledge of the wide world of sports!"
+
+questions:
+  - question: "Which country won the first ever FIFA World Cup in 1930?"
+    choices:
+      - "Brazil"
+      - "Argentina"
+      - "Uruguay"
+      - "Italy"
+    correct: 2
+    time_limit: 20
+
+  - question: "In which sport would you perform a 'slam dunk'?"
+    choices:
+      - "Tennis"
+      - "Basketball"
+      - "Volleyball"
+      - "American Football"
+    correct: 1
+    time_limit: 15
+
+  - question: "How many players are on a standard soccer team on the field at one time?"
+    choices:
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+    correct: 2
+    time_limit: 15
+
+  - question: "The sport of cricket originated in which country?"
+    choices:
+      - "India"
+      - "Australia"
+      - "South Africa"
+      - "England"
+    correct: 3
+    time_limit: 20
+
+  - question: "Which athlete has the most Olympic medals?"
+    choices:
+      - "Usain Bolt"
+      - "Michael Phelps"
+      - "Larisa Latynina"
+      - "Paavo Nurmi"
+    correct: 1
+    time_limit: 20
+
+  - question: "In tennis, what is the term for a score of 40-40?"
+    choices:
+      - "Love"
+      - "Advantage"
+      - "Deuce"
+      - "Match Point"
+    correct: 2
+    time_limit: 15
+
+  - question: "What is the maximum number of clubs a golfer is allowed to have in their bag during a round?"
+    choices:
+      - "10"
+      - "12"
+      - "14"
+      - "16"
+    correct: 2
+    time_limit: 20
+
+  - question: "Which two teams have won the most Super Bowl titles?"
+    choices:
+      - "Green Bay Packers and Dallas Cowboys"
+      - "San Francisco 49ers and Kansas City Chiefs"
+      - "New England Patriots and Pittsburgh Steelers"
+      - "New York Giants and Denver Broncos"
+    correct: 2
+    time_limit: 25
+
+  - question: "The 'Tour de France' is a famous multi-stage race in which sport?"
+    choices:
+      - "Running"
+      - "Swimming"
+      - "Cycling"
+      - "Skiing"
+    correct: 2
+    time_limit: 15
+
+  - question: "What is the diameter of a standard basketball hoop in inches?"
+    choices:
+      - "16 inches"
+      - "18 inches"
+      - "20 inches"
+      - "22 inches"
+    correct: 1
+    time_limit: 20

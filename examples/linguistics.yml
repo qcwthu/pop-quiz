@@ -1,0 +1,91 @@
+title: "Language Learner's Linguistics"
+description: "Test your knowledge of how languages work and how we learn them!"
+
+questions:
+  - question: "What is the study of language called?"
+    choices:
+      - "Philology"
+      - "Etymology"
+      - "Linguistics"
+      - "Lexicography"
+    correct: 2
+    time_limit: 15
+
+  - question: "Which term refers to the smallest unit of sound that can distinguish meaning in a language?"
+    choices:
+      - "Morpheme"
+      - "Phoneme"
+      - "Syntagm"
+      - "Lexeme"
+    correct: 1
+    time_limit: 20
+
+  - question: "What is the process of acquiring your native language called?"
+    choices:
+      - "Second language acquisition"
+      - "Foreign language learning"
+      - "First language acquisition"
+      - "Bilingualism"
+    correct: 2
+    time_limit: 15
+
+  - question: "Which language family includes English, German, and Spanish?"
+    choices:
+      - "Sino-Tibetan"
+      - "Afro-Asiatic"
+      - "Indo-European"
+      - "Uralic"
+    correct: 2
+    time_limit: 20
+
+  - question: "What does 'syntax' primarily study in linguistics?"
+    choices:
+      - "The meaning of words"
+      - "The structure of sentences"
+      - "The sounds of language"
+      - "The history of words"
+    correct: 1
+    time_limit: 15
+
+  - question: "A 'cognate' is a word that has a common origin with a word in another language. True or False?"
+    choices:
+      - "True"
+      - "False"
+    correct: 0
+    time_limit: 10
+
+  - question: "What is the name for the period during which children can most easily acquire a native-like proficiency in a language?"
+    choices:
+      - "Critical Period"
+      - "Fluency Phase"
+      - "Immersion Stage"
+      - "Cognitive Development Phase"
+    correct: 0
+    time_limit: 25
+
+  - question: "Which of these is NOT a component of 'Communicative Competence'?"
+    choices:
+      - "Grammatical competence"
+      - "Sociolinguistic competence"
+      - "Strategic competence"
+      - "Artistic competence"
+    correct: 3
+    time_limit: 20
+
+  - question: "What is 'code-switching'?"
+    choices:
+      - "Translating words directly"
+      - "Mixing two or more languages in conversation"
+      - "Speaking only one language at a time"
+      - "Using gestures instead of words"
+    correct: 1
+    time_limit: 20
+
+  - question: "Which linguistic phenomenon describes when a speaker uses a language form that is influenced by their first language?"
+    choices:
+      - "Interference"
+      - "Overgeneralization"
+      - "Fossilization"
+      - "Simplification"
+    correct: 0
+    time_limit: 20

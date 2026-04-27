@@ -1,0 +1,30 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+
+# Virtual environments and local env files
+.venv/
+venv/
+.env
+.env.*
+
+# Test and tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Locally generated quiz files
+generated/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store

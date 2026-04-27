@@ -1,0 +1,93 @@
+title: "Board Game Bonanza"
+description: "Roll the dice and move your pawn! Test your board game knowledge!"
+
+questions:
+  - question: "In Monopoly, what is the most expensive property to buy on the standard board?"
+    choices:
+      - "Park Place"
+      - "Boardwalk"
+      - "Pennsylvania Avenue"
+      - "Marvin Gardens"
+    correct: 1
+    time_limit: 20
+
+  - question: "How many squares are on a standard chess board?"
+    choices:
+      - "32"
+      - "64"
+      - "100"
+      - "128"
+    correct: 1
+    time_limit: 15
+
+  - question: "Which game involves trying to guess the secret color code of your opponent?"
+    choices:
+      - "Connect Four"
+      - "Battleship"
+      - "Mastermind"
+      - "Guess Who?"
+    correct: 2
+    time_limit: 20
+
+  - question: "In the game of Scrabble, which letter is worth the most points?"
+    choices:
+      - "Z"
+      - "Q"
+      - "X"
+      - "J"
+    correct: 1
+    time_limit: 15
+
+  - question: "What is the objective of the game 'Catan'?"
+    choices:
+      - "To conquer the most territory"
+      - "To collect the most resources"
+      - "To be the first to reach 10 victory points"
+      - "To trade with other players"
+    correct: 2
+    time_limit: 20
+
+  - question: "Which board game features characters like Colonel Mustard, Miss Scarlett, and Professor Plum?"
+    choices:
+      - "Clue"
+      - "Risk"
+      - "Life"
+      - "Pictionary"
+    correct: 0
+    time_limit: 15
+
+  - question: "The game of 'Go' originated in which country?"
+    choices:
+      - "Japan"
+      - "Korea"
+      - "China"
+      - "India"
+    correct: 2
+    time_limit: 20
+
+  - question: "What color is the starting space in the game of Candy Land?"
+    choices:
+      - "Red"
+      - "Blue"
+      - "Green"
+      - "Pink"
+    correct: 3
+    time_limit: 10
+
+  - question: "In 'Trivial Pursuit', what are the triangular pieces called that players collect?"
+    choices:
+      - "Pies"
+      - "Wedges"
+      - "Slices"
+      - "Tokens"
+    correct: 1
+    time_limit: 15
+
+  - question: "Which game involves players building a railway network across a map?"
+    choices:
+      - "Ticket to Ride"
+      - "Carcassonne"
+      - "Small World"
+      - "Pandemic"
+    correct: 0
+    time_limit: 20

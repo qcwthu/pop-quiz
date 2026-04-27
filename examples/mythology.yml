@@ -1,0 +1,57 @@
+title: "Mythology Mania"
+description: "Test your knowledge of ancient gods, heroes, and monsters!"
+
+questions:
+  - question: "In Greek mythology, who is the god of the sea?"
+    choices:
+      - "Zeus"
+      - "Poseidon"
+      - "Hades"
+      - "Apollo"
+    correct: 1
+    time_limit: 15
+
+  - question: "Which creature in Greek mythology was a winged horse?"
+    choices:
+      - "Centaur"
+      - "Gryphon"
+      - "Pegasus"
+      - "Chimera"
+    correct: 2
+    time_limit: 15
+
+  - question: "In Norse mythology, what is the name of Thor's hammer?"
+    choices:
+      - "Gungnir"
+      - "Mjolnir"
+      - "Asgard"
+      - "Bifrost"
+    correct: 1
+    time_limit: 20
+
+  - question: "Anubis, the god of embalming and the dead, is from which mythology?"
+    choices:
+      - "Roman"
+      - "Norse"
+      - "Egyptian"
+      - "Greek"
+    correct: 2
+    time_limit: 15
+
+  - question: "Who is the Roman equivalent of the Greek god Zeus?"
+    choices:
+      - "Mars"
+      - "Jupiter"
+      - "Neptune"
+      - "Saturn"
+    correct: 1
+    time_limit: 15
+
+  - question: "The Minotaur, a half-man half-bull creature, was imprisoned in a labyrinth on which island?"
+    choices:
+      - "Sicily"
+      - "Rhodes"
+      - "Cyprus"
+      - "Crete"
+    correct: 3
+    time_limit: 20

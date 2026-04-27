@@ -1,0 +1,48 @@
+title: "Art History Masterpieces"
+description: "Can you identify these famous works of art and their creators?"
+
+questions:
+  - question: "Who painted the Mona Lisa?"
+    choices:
+      - "Vincent van Gogh"
+      - "Pablo Picasso"
+      - "Leonardo da Vinci"
+      - "Michelangelo"
+    correct: 2
+    time_limit: 15
+
+  - question: "Which artist is famous for his 'drip' technique and is a key figure in the abstract expressionist movement?"
+    choices:
+      - "Andy Warhol"
+      - "Jackson Pollock"
+      - "Salvador Dalí"
+      - "Claude Monet"
+    correct: 1
+    time_limit: 20
+
+  - question: "The painting 'The Starry Night' was created by which artist?"
+    choices:
+      - "Vincent van Gogh"
+      - "Edvard Munch"
+      - "Georges Seurat"
+      - "Rembrandt"
+    correct: 0
+    time_limit: 15
+
+  - question: "What art movement is characterized by its dream-like scenes and symbolic imagery, with Salvador Dalí as its most famous proponent?"
+    choices:
+      - "Cubism"
+      - "Impressionism"
+      - "Surrealism"
+      - "Baroque"
+    correct: 2
+    time_limit: 20
+
+  - question: "The iconic painting 'The Scream' was created by which Norwegian artist?"
+    choices:
+      - "Gustav Klimt"
+      - "Edvard Munch"
+      - "Frida Kahlo"
+      - "Wassily Kandinsky"
+    correct: 1
+    time_limit: 15

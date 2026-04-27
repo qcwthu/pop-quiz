@@ -1,0 +1,30 @@
+title: "Test Quiz"
+description: "A short quiz for testing purposes."
+
+questions:
+  - question: "What is 2 + 2?"
+    choices:
+      - "3"
+      - "4"
+      - "5"
+      - "22"
+    correct: 1
+    time_limit: 10
+
+  - question: "What acts as the 'brain' of the computer?"
+    choices:
+      - "Hard Drive"
+      - "RAM"
+      - "CPU"
+      - "GPU"
+    correct: 2
+    time_limit: 10
+
+  - question: "Which of these is a fruit?"
+    choices:
+      - "Carrot"
+      - "Broccoli"
+      - "Apple"
+      - "Potato"
+    correct: 2
+    time_limit: 10

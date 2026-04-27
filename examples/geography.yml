@@ -1,0 +1,92 @@
+title: "World Geography"
+description: "Test your knowledge of countries, capitals, and landmarks!"
+
+questions:
+  - question: "What is the capital of Australia?"
+    choices:
+      - "Sydney"
+      - "Melbourne"
+      - "Canberra"
+      - "Perth"
+    correct: 2
+    time_limit: 15
+
+  - question: "Which is the longest river in the world?"
+    choices:
+      - "Amazon"
+      - "Nile"
+      - "Yangtze"
+      - "Mississippi"
+    correct: 1
+    time_limit: 15
+
+  - question: "Mount Everest is located on the border of which two countries?"
+    choices:
+      - "India and China"
+      - "Nepal and Tibet (China)"
+      - "Pakistan and China"
+      - "Nepal and India"
+    correct: 1
+    time_limit: 20
+
+  - question: "Which country has the most natural lakes?"
+    choices:
+      - "United States"
+      - "Russia"
+      - "Canada"
+      - "Finland"
+    correct: 2
+    time_limit: 20
+
+  - question: "The Sahara Desert is located on which continent?"
+    choices:
+      - "Africa"
+      - "Asia"
+    correct: 0
+    time_limit: 10
+
+  - question: "Which of these cities is NOT a national capital?"
+    choices:
+      - "Ottawa"
+      - "Brasilia"
+      - "Sydney"
+      - "Cairo"
+      - "Tokyo"
+    correct: 2
+    time_limit: 20
+
+  - question: "What is the smallest country in the world by area?"
+    choices:
+      - "Monaco"
+      - "San Marino"
+      - "Vatican City"
+      - "Liechtenstein"
+    correct: 2
+    time_limit: 15
+
+  - question: "Which ocean is the largest?"
+    choices:
+      - "Atlantic"
+      - "Indian"
+      - "Pacific"
+      - "Arctic"
+    correct: 2
+    time_limit: 10
+
+  - question: "In which European country would you find the Matterhorn?"
+    choices:
+      - "Austria"
+      - "France"
+      - "Switzerland"
+      - "Italy"
+    correct: 2
+    time_limit: 20
+
+  - question: "How many continents are there?"
+    choices:
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+    correct: 2
+    time_limit: 10
